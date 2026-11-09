@@ -1,0 +1,15 @@
+const assert=require('node:assert/strict');
+const {resolve}=require('../resolve.js');
+const catalog=require('../catalog.json');
+assert.equal(resolve(catalog,{card_id:111602}).costume_id,'111626');
+assert.equal(resolve(catalog,{character_id:1116,costume_id:111626}).card_id,'111602');
+assert.equal(resolve(catalog,{card_id:111602,character_id:1001}),null);
+assert.equal(resolve(catalog,{card_id:111602,costume_id:111601}),null);
+assert.equal(resolve(catalog,{character_id:1116}),null);
+assert.equal(resolve(catalog,{character_id:1116,costume_id:999999}),null);
+assert.equal(resolve(catalog,{card_id:999999}),null);
+const unavailable={assets:[{...catalog.assets.find(a=>a.card_id==='111602'),status:'unavailable'}]};
+assert.equal(resolve(unavailable,{card_id:111602}),null);
+assert.equal(resolve({assets:[catalog.assets[0],catalog.assets[0]]},{card_id:catalog.assets[0].card_id}),null);
+assert.equal(resolve(catalog,{card_id:111602},'https://example.com/library/v1').url,'https://example.com/library/v1/assets/racewear/111602.png');
+console.log('Exact card/costume resolution and safe missing-variant behavior passed');
