@@ -192,5 +192,27 @@
     "alpha": true,
     "recommended_max_css_width_2x": 128,
     "recommended_max_css_height_2x": 128
+  },
+  {
+    "id": "100403-portrait",
+    "card_id": "100403",
+    "character_id": "1004",
+    "character_name": "Maruzensky",
+    "costume_id": "100410",
+    "outfit_id": "new_year",
+    "outfit_name": "Auspicious Maiden of Divine Speed",
+    "kind": "game-portrait",
+    "path": "assets/portraits/100403.png",
+    "source_url": "https://raw.githubusercontent.com/Flyingsparks1130/ddt2/b5ade50c511f4e2b1c974dfa2171b6e68480467f/tools/tournament-companion/DominatorNetwork/assets/cards/100403.png",
+    "source_page": "https://gametora.com/umamusume/characters/100403-maruzensky",
+    "credit": "Character © Cygames, Inc.",
+    "status": "available",
+    "width": 256,
+    "height": 256,
+    "bytes": 28566,
+    "sha256": "2ba21a7a44b252ff41aee1b2187dcdc3fa71c1fbc6f64bd132b8b6243e5bf7c6",
+    "alpha": true,
+    "recommended_max_css_width_2x": 128,
+    "recommended_max_css_height_2x": 128
   }
 ]
