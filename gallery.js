@@ -18,7 +18,10 @@ try{
       const ids=document.createElement('small');ids.textContent=`Card ${a.card_id} · Costume ${a.costume_id}`;
       const dimensions=document.createElement('small');dimensions.textContent=a.status==='available'?`${a.width} × ${a.height} · Original PNG`:'Unavailable';
       const source=document.createElement('a');source.href=a.source_page;source.textContent='Source';source.target='_blank';source.rel='noopener';
-      info.append(title,outfit,source,ids,dimensions);article.append(figure,info);list.append(article);
+      info.append(title,outfit,source,ids,dimensions);
+      const portrait=catalog.poses?.find(p=>p.kind==='game-portrait'&&p.card_id===a.card_id&&p.status==='available');
+      if(portrait){const link=document.createElement('a');link.href=portrait.path;link.textContent='Portrait';info.append(link);}
+      article.append(figure,info);list.append(article);
     }
     status.textContent=`${assets.length} of ${catalog.assets.length} outfit variants · Catalog updated ${catalog.updated}`;
   };

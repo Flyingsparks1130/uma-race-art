@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-11-09",
+  "updated": "2026-11-23",
   "source_catalog": "https://gametora.com/data/umamusume/character-cards.0e9f93ec.json",
   "source_manifest": "https://gametora.com/data/manifests/umamusume.json",
   "lookup_policy": "Exact card_id, or exact character_id + costume_id. No base-outfit fallback.",
@@ -7163,6 +7163,28 @@
       "recommended_max_css_width_2x": 384,
       "recommended_max_css_height_2x": 512,
       "fallback_path": "assets/racewear/111601.png"
+    },
+    {
+      "id": "106502-portrait",
+      "card_id": "106502",
+      "character_id": "1065",
+      "character_name": "Daitaku Helios",
+      "costume_id": "106520",
+      "outfit_id": "ballroom",
+      "outfit_name": "Joyful Jamboree!",
+      "kind": "game-portrait",
+      "path": "assets/portraits/106502.png",
+      "source_url": "https://raw.githubusercontent.com/Flyingsparks1130/ddt2/38f22695a7e0c2016e0de156e5917c88239e0161/tools/tournament-companion/DominatorNetwork/assets/cards/106502.png",
+      "source_page": "https://gametora.com/umamusume/characters/106502-daitaku-helios",
+      "credit": "Character © Cygames, Inc.",
+      "status": "available",
+      "width": 256,
+      "height": 256,
+      "bytes": 27418,
+      "sha256": "b389483c409a6fbabd2a38297085e9839b6eb732371655a9f321e2ec430d7477",
+      "alpha": true,
+      "recommended_max_css_width_2x": 128,
+      "recommended_max_css_height_2x": 128
     }
   ]
 }

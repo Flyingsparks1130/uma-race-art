@@ -18,14 +18,25 @@ def download(url):
             if attempt == 2: raise
             time.sleep(attempt + 1)
 
-def png_info(data):
+def png_info(data, *, portrait=False):
     if data[:8] != b'\x89PNG\r\n\x1a\n' or data[12:16] != b'IHDR':
         raise ValueError('Expected an original PNG, received another format')
     width, height = struct.unpack('>II', data[16:24])
-    if width < 768 or height < 1024:
+    if portrait and (width != height or width < 256):
+        raise ValueError(f'Expected a square native portrait of at least 256 pixels: {width}x{height}')
+    if not portrait and (width < 768 or height < 1024):
         raise ValueError(f'Image is below the 768x1024 full-body quality floor: {width}x{height}')
-    if data[25] not in (4, 6):
-        raise ValueError('Full-body asset must contain an alpha channel')
+    alpha = data[25] in (4, 6)
+    if portrait and data[25] == 3:
+        offset = 8
+        while offset + 12 <= len(data):
+            size = int.from_bytes(data[offset:offset+4], 'big')
+            if data[offset+4:offset+8] == b'tRNS':
+                alpha = any(a < 255 for a in data[offset+8:offset+8+size])
+                break
+            offset += 12 + size
+    if not alpha:
+        raise ValueError('Artwork must contain an alpha channel')
     return {'width': width, 'height': height, 'bytes': len(data),
             'sha256': hashlib.sha256(data).hexdigest(), 'alpha': True,
             'recommended_max_css_width_2x': width // 2,

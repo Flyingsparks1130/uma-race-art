@@ -15,7 +15,7 @@ for asset in catalog['assets'] + catalog.get('poses', []):
     if hashlib.sha256(data).hexdigest() != asset['sha256']:
         raise ValueError(f'Checksum mismatch: {path.name}')
     if path.suffix == '.png':
-        info = png_info(data)
+        info = png_info(data, portrait=asset.get('kind') == 'game-portrait')
         for key in ('width', 'height', 'bytes', 'alpha'):
             if info[key] != asset[key]: raise ValueError(f'Incorrect {key}: {path.name}')
     if 'thumb/' in asset['source_url'] or '/256/' in asset['source_url']:
