@@ -7295,6 +7295,28 @@
       "alpha": true,
       "recommended_max_css_width_2x": 128,
       "recommended_max_css_height_2x": 128
+    },
+    {
+      "id": "104603-portrait",
+      "card_id": "104603",
+      "character_id": "1046",
+      "character_name": "Smart Falcon",
+      "costume_id": "104650",
+      "outfit_id": "parade",
+      "outfit_name": "Luminous ☆ Twirler",
+      "kind": "game-portrait",
+      "path": "assets/portraits/104603.png",
+      "source_url": "https://raw.githubusercontent.com/Flyingsparks1130/ddt2/815c2b932065d4cb4ba4f70389ce0fa3233f0353/tools/tournament-companion/DominatorNetwork/assets/cards/104603.png",
+      "source_page": "https://gametora.com/umamusume/characters/104603-smart-falcon",
+      "credit": "Character © Cygames, Inc.",
+      "status": "available",
+      "width": 256,
+      "height": 256,
+      "bytes": 31603,
+      "sha256": "f57154408c37e83cee824f26b22bfedd8d25225c55a7d462d6798ebfddb65b61",
+      "alpha": true,
+      "recommended_max_css_width_2x": 128,
+      "recommended_max_css_height_2x": 128
     }
   ]
 }
