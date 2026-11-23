@@ -7251,6 +7251,28 @@
       "alpha": true,
       "recommended_max_css_width_2x": 128,
       "recommended_max_css_height_2x": 128
+    },
+    {
+      "id": "111501-portrait",
+      "card_id": "111501",
+      "character_id": "1115",
+      "character_name": "Orfevre",
+      "costume_id": "111501",
+      "outfit_id": "original",
+      "outfit_name": "Total Dominion",
+      "kind": "game-portrait",
+      "path": "assets/portraits/111501.png",
+      "source_url": "https://raw.githubusercontent.com/Flyingsparks1130/ddt2/bd5c37a253cb5b8173f0cbe8bb10fb235e487479/tools/tournament-companion/DominatorNetwork/assets/cards/111501.png",
+      "source_page": "https://gametora.com/umamusume/characters/111501-orfevre",
+      "credit": "Character © Cygames, Inc.",
+      "status": "available",
+      "width": 256,
+      "height": 256,
+      "bytes": 30940,
+      "sha256": "a08d2482b33f78caca6cd8fef537535a5cd374fe297169a3fbcf8e2881c24d54",
+      "alpha": true,
+      "recommended_max_css_width_2x": 128,
+      "recommended_max_css_height_2x": 128
     }
   ]
 }
